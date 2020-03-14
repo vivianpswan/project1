@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'tutors/new'
   root :to => 'pages#welcome'
-  resources :users, :only => [:new, :create, :index]
+  resources :tutors, :only => [:new, :create, :index]
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  resources :mixtapes, :only => [:new, :create]
+  resources :tutors, :only => [:new, :create]
 end
