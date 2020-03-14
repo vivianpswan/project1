@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  resources :tutors, :only => [:new, :create]
+  resources :students
 end

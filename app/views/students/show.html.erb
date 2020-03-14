@@ -1,0 +1,17 @@
+<h1><%= @student.name %></h1>
+
+<%= image_tag @student.image, :class => 'feature' if @student.image.present? %>
+<ul>
+  <li>Name: <%= @student.name %></li>
+  <li>Date of birth: <%= @student.dob.strftime '%A, %B %e, %Y' if @student.dob.present? %></li>
+  <li>Period: <%= @student.period %></li>
+</ul>
+
+<% @student.tutors.each do |tutor| %>
+  <%= link_to image_tag(tutor.name), tutor %>
+<% end %>
+
+<div class="controls">
+  <%= link_to 'Edit Student', edit_student_path(@student) %>
+  <%= link_to "Delete #{ @student.name }", @student, :method => 'delete' %>
+</div>

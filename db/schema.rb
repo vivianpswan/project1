@@ -71,11 +71,11 @@ ActiveRecord::Schema.define(version: 2020_03_14_034700) do
     t.string "password_digest"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.text "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
-  end
+  # create_table "users", force: :cascade do |t|
+  #   t.text "email"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  #   t.string "password_digest"
+  # end
 
 end

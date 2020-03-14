@@ -13,7 +13,7 @@ class TutorsController < ApplicationController
     @tutor = Tutor.new tutor_params
     if @tutor.save
       session[:tutor_id] = @tutor.id
-      redirect_to root_path
+      redirect_to tutors_path
     else
       render :new
     end
@@ -28,7 +28,7 @@ class TutorsController < ApplicationController
 
   private
   def tutor_params
-    params.require(:tutor).permit(:email, :password)
+    params.require(:tutor).permit(:email, :password, :password_confirmation)
   end
 
   

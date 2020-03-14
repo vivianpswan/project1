@@ -13,9 +13,9 @@
     <nav>
         <%= link_to "Home", root_path %>
         <% if @current_tutor.present? %>
-          <%= link_to "All Tutors", tutors_path if @current_user.admin? %>
-          <%= link_to "Create mixtape", new_mixtape_path %>
-          <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
+          <%= link_to "All Tutors", tutors_path if @current_tutor.admin? %>
+          <%= link_to "Create student", new_student_path %>
+          <%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete' %>
         <% else %>
           <%= link_to "Sign up", new_tutor_path %>
           <%= link_to "Sign in", login_path %>
