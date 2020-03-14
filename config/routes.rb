@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+  get 'tutors/new'
   root :to => 'pages#welcome'
   resources :users, :only => [:new, :create, :index]
 

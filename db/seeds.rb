@@ -1,8 +1,8 @@
 
 Tutor.destroy_all
-t1 = Tutor.create :name => 'Tom Hanks', :email => 'tomhanks@gmail.com', :password => 'chicken', :stage => 'Year 2', :subject => 'Maths'
-t2 = Tutor.create :name => 'Rita Hanks', :email => 'ritahanks@gmail.com', :password => 'chicken', :stage => 'Year 2', :subject => 'English'
-t3 = Tutor.create :name => 'Carol Hanks', :email => 'carolhanks@gmail.com', :password => 'chicken', :stage => 'Year 2', :subject => 'Maths'
+t1 = Tutor.create :name => 'Tom Hanks', :stage => 'Year 2', :subject => 'Maths', :email => 'tomhanks@gmail.com', :password => 'chicken', :admin => true 
+t2 = Tutor.create :name => 'Rita Hanks', :stage => 'Year 2', :subject => 'English', :email => 'ritahanks@gmail.com', :password => 'chicken'
+t3 = Tutor.create :name => 'Carol Hanks', :stage => 'Year 2', :subject => 'Maths', :email => 'carolhanks@gmail.com', :password => 'chicken'
 
 puts "#{ Tutor.count } tutors created"
 
@@ -20,5 +20,19 @@ puts "#{ Student.count } students created"
 
 Result.destroy_all
 r1 = Result.create :outcome => 'Year 2', :completion => 'True'
-r1 = Result.create :outcome => 'Year 2', :completion => 'False'
+r2 = Result.create :outcome => 'Year 2', :completion => 'False'
 puts "#{ Result.count } results created"
+
+# Associations #################################################################
+puts "Tutors and students"
+t1.students << s1
+t2.students << s2
+t3.students << s1
+
+puts "Results and programs"
+r1.programs << p1 << p2
+r2.programs << p1
+
+puts "Students and results"
+s1.results << r1
+s2.results << r2

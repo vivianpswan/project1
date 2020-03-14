@@ -7,6 +7,7 @@ class CreateTutors < ActiveRecord::Migration[5.2]
       t.boolean :admin
       t.text :stage
       t.text :subject
+      
 
       t.timestamps
     end
