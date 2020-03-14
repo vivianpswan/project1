@@ -2,7 +2,7 @@
 
 <% if @tutor.errors.any? %>
   <ol>
-    <% @error.errors.full_messages.each do |msg| %>
+    <% @tutor.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
   </ol>
