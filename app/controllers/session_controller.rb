@@ -16,7 +16,7 @@ def create
 end
 
 def destroy
-  session[:user_id] = nil # Log the user out
+  session[:tutor_id] = nil # Log the user out
   redirect_to login_path
 end
 
