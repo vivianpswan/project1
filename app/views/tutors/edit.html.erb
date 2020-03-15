@@ -1,2 +1,25 @@
-<h1>Tutors#edit</h1>
-<p>Find me in app/views/tutors/edit.html.erb</p>
+<h2>Edit Tutor</h2>
+
+<form action="<%= tutor_path(@tutor.id) %>" method="post">
+  <label>
+    Name:
+    <input name="name" required value="<%= @planet.name %>">
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image" value="<%= @planet.image %>">
+  </label>
+
+  <label>
+    Orbit:
+    <input type="number" name="orbit" value="<%= @planet.orbit %>">
+  </label>
+
+  <label>
+    Diameter:
+    <input type="number" name="diameter" value="<%= @planet.diameter %>">
+  </label>
+
+  <button>Update tutor</button>
+  </form>

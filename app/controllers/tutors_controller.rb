@@ -18,17 +18,31 @@ class TutorsController < ApplicationController
       render :new
     end
   end
-  
-    def show
+
+  def edit
+    @tutor = Tutor.find params[:id]
+  end
+
+  def update
+    tutor = Tutor.find params[:id]
+    tutor.update tutor_params
+    redirect_to tutor
+  end
+
+  def show
+    @tutor = Tutor.find params[:id]
+  end
+
+    def destroy
+      tutor = Tutor.find params[:id]
+      tutor.destroy
+      redirect_to tutors_path
     end
-  
-    def edit
-    end
-  
+
 
   private
   def tutor_params
-    params.require(:tutor).permit(:email, :password, :password_confirmation)
+    params.require(:tutor).permit(:email, :password, :password_confirmation, :student_id)
   end
 
   
