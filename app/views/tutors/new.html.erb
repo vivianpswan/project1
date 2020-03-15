@@ -24,7 +24,10 @@
     <%= f.password_field :password_confirmation, :required => true %>
   </fieldset>
 
-  <%= form.check_box :admin %>
+  <fieldset>
+  <%= f.label :admin %>
+  <%= f.check_box :admin %>
+  </fieldset>
 
   <%= f.submit "Sign up now!" %>
 <% end %>
