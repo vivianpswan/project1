@@ -9,6 +9,12 @@
 <% end %>
 
 <%= form_for @tutor do |f| %>
+
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true, :autofocus => true %>
+  </fieldset>
+
   <fieldset>
     <%= f.label :email %>
     <%= f.email_field :email, :required => true, :autofocus => true %>
@@ -29,5 +35,5 @@
   <%= f.check_box :admin %>
   </fieldset>
 
-  <%= f.submit "Sign up as a new tutor now!" %>
+  <%= f.submit "Sign up a new tutor now!" %>
 <% end %>

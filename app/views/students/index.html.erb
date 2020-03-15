@@ -1,5 +1,6 @@
 <h1>All Students</h1>
 
+
 <% @students.each do |student| %>
   <%= image_tag student.image, :class => 'thumb' if student.image.present? %>
   <ul>
@@ -8,3 +9,5 @@
     <li>Stage: <%= student.stage %></li>
   </ul>
 <% end %>
+
+

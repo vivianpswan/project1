@@ -4,10 +4,6 @@ def index
     @students = Student.all
     end
 
-    def show
-        @student = Student.find params[:id]
-        end    
-
 def new
     @student = Student.new
    end
@@ -16,7 +12,7 @@ def create
     student = Student.create student_params
     @current_tutor.students << student # Association
 
-    redirect_to students_path
+    redirect_to students_path(student.id)
 end
 
 def edit
@@ -26,7 +22,7 @@ def edit
 def update
     student = Student.find params[:id]
     student.update student_params
-    redirect_to student
+    redirect_to students.path(student.id)
 end
 
 def show

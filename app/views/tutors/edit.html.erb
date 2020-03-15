@@ -1,24 +1,24 @@
 <h2>Edit Tutor</h2>
 
-<form action="<%= tutor_path(@tutor.id) %>" method="post">
+<form action="<%= tutor_path(@tutor.id) %>" method="put">
   <label>
     Name:
-    <input name="name" required value="<%= @planet.name %>">
+    <input name="name" required value="<%= @tutor.name %>">
   </label>
 
   <label>
-    Image:
-    <input type="url" name="image" value="<%= @planet.image %>">
+    Email:
+    <input type="text" name="email" value="<%= @tutor.email %>">
   </label>
 
   <label>
-    Orbit:
-    <input type="number" name="orbit" value="<%= @planet.orbit %>">
+    Stage:
+    <input type="text" name="stage" value="<%= @tutor.stage %>">
   </label>
 
   <label>
-    Diameter:
-    <input type="number" name="diameter" value="<%= @planet.diameter %>">
+    Subject:
+    <input type="text" name="subject" value="<%= @tutor.subject %>">
   </label>
 
   <button>Update tutor</button>

@@ -1,25 +1,3 @@
-<h1>Sign Up Form For New Students</h1>
+<h1>Sign Up Form For a New Student</h1>
 
-<%= form_for @student do |f| %>
-  <fieldset>
-    <%= f.label :name %>
-    <%= f.text_field :name, :required => true, :autofocus => true %>
-  </fieldset>
-
-  <fieldset>
-    <%= f.label :image %>
-    <%= f.text_field :image %>
-  </fieldset>
-
-  <fieldset>
-    <%= f.label :age %>
-    <%= f.number_field :age, :required => true %>
-  </fieldset>
-
-  <fieldset>
-    <%= f.label :stage %>
-    <%= f.text_field :stage, :required => true %>
-  </fieldset>
-
-  <%= f.submit "Sign up a new student now!" %>
-<% end %>
+<%= render :partial => 'form' %>

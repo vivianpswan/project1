@@ -1,2 +1,19 @@
-<h1>Tutors#show</h1>
-<p>Find me in app/views/tutors/show.html.erb</p>
+<h1><%= "Profile of #{ @tutor.name }" %></h1>
+
+<ul>
+  <li>Name: <%= @tutor.name %></li>
+  <li>Email: <%= @tutor.email %></li>
+  <li>Stage: <%= @tutor.stage %></li>
+  <li>Subject: <%= @tutor.subject %></li>
+
+  <% @tutor.students.each do |student| %>
+    <li>Students: <%= link_to " Student #{ @tutor.students.name }", student_path %></li>
+  <% end %>
+
+
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit #{ @tutor.name }", edit_tutor_path(@tutor) %>
+  <%= link_to "Delete #{ @tutor.name }", @tutor, :method => 'delete' %>
+</div>
