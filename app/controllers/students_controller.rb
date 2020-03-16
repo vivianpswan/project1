@@ -12,7 +12,7 @@ def create
     student = Student.create student_params
     @current_tutor.students << student # Association
 
-    redirect_to students_path(student.id)
+    redirect_to student
 end
 
 def edit

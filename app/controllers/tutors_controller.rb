@@ -12,12 +12,15 @@ class TutorsController < ApplicationController
   def create
     @tutor = Tutor.new tutor_params
     if @tutor.save
-      session[:tutor_id] = @tutor.id
+      session[:tutor_id] = @tutor.id if session[:tutor_id].nil? # this
       redirect_to tutors_path
     else
       render :new
     end
   end
+
+
+
 
   def edit
     @tutor = Tutor.find params[:id]
