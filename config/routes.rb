@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   resources :students
+  resources :articles
   
 end
