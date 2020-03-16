@@ -1,0 +1,21 @@
+<%= form_for @tutor do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true, :autofocus => true %>
+    <%= f.label :email %>
+    <%= f.text_field :email, :required => true, :autofocus => true %>
+    <%= f.label :stage %>
+    <%= f.text_field :stage %>
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+    <% if @tutor.id.nil? %>
+    <%= f.label :password %>
+    <%= f.password_field :password, :required => true %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :required => true %>
+    <%= f.label :admin? %>
+    <%= f.check_box :admin %><br />
+      <%= f.submit %>
+  <% end %>
+
+
+<% end %>
