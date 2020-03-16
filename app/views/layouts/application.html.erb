@@ -10,17 +10,25 @@
   </head>
 
   <body>
+      <div class="logo">
+        <img src="http://www.sailprogram.org.au/site/wp-content/uploads/sail_logo-FINAL_02-142x300.png" alt="Sudanese Australian Integrated Learning (SAIL) Program">
+      </div>
+
     <nav>
+      <div class="links">
         <%= link_to "Home", root_path %>
+
         <% if @current_tutor.present? %>
-          <%= link_to "All Tutors", tutors_path if @current_tutor.admin? %>
-          <%= link_to "All Students", students_path if @current_tutor.admin? %>
-          <%= link_to "Create Student", new_student_path %>
-          <%= link_to 'Articles', controller: 'articles' %>
-          <%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete' %>
-        <% else %>
-          <%= link_to "Sign up", new_tutor_path %>
-          <%= link_to "Sign in", login_path %>
+
+            <%= link_to "All Tutors", tutors_path if @current_tutor.admin? %>
+            <%= link_to "All Students", students_path if @current_tutor.admin? %>
+            <%= link_to "Create Student", new_student_path %>
+            <%= link_to 'Articles', controller: 'articles' %>
+            <%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete' %>
+      </div>
+          <% else %>
+            <%= link_to "Sign up", new_tutor_path %>
+            <%= link_to "Sign in", login_path %>
         <% end %>
       </nav>
     <%= yield %>
