@@ -1,4 +1,4 @@
-<h1><%= "Profile of #{ @tutor.name }" %></h1>
+<h1><%= "Tutor Profile of #{ @tutor.name }" %></h1>
 
 <ul>
   <li>Name: <%= @tutor.name %></li>
@@ -7,7 +7,7 @@
   <li>Subject: <%= @tutor.subject %></li>
 
   <% @tutor.students.each do |student| %>
-    <li>Students: <%= link_to " Student #{ @tutor.students.name }", student_path %></li>
+    <li>Students: <%= link_to student.name, student %></li>
   <% end %>
 
 
