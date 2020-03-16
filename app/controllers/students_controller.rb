@@ -22,7 +22,7 @@ def edit
 def update
     student = Student.find params[:id]
     student.update student_params
-    redirect_to students.path(student.id)
+    redirect_to students_path(student.id)
 end
 
 def show
