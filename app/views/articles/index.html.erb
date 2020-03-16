@@ -1,23 +1,26 @@
 
-<h1>Listing Articles</h1>
-
-<%= link_to 'New article', new_article_path %>
+<h1> List of Articles</h1>
 
 <table>
   <tr>
+    <th>Date</th>
     <th>Title</th>
-    <th>Text</th>
+    <th>Description</th>
     <th></th>
   </tr>
  
   <% @articles.each do |article| %>
     <tr>
-      <td><%= article.title %></td>
+      <td><%= article.last_updated %></td>
+      <td><%= article.title.truncate(20) %></td>
       <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-      method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
+      <td><%= link_to 'Read more', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) if @current_tutor.admin? %></td>
+      <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } if @current_tutor.admin? %></td>
     </tr>
   <% end %>
 </table>
+
+
+<%= link_to 'Add a new article', new_article_path %>
+

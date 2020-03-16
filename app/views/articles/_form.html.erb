@@ -13,14 +13,19 @@
         </ul>
       </div>
     <% end %>
-   
+  
+    <p>
+      <%= form.label :last_updated %><br>
+      <%= form.date_field :last_updated %>
+    </p>    
+
     <p>
       <%= form.label :title %><br>
       <%= form.text_field :title %>
     </p>
    
     <p>
-      <%= form.label :text %><br>
+      <%= form.label :description %><br>
       <%= form.text_area :text %>
     </p>
    
