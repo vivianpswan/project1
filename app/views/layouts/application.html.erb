@@ -9,29 +9,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-      <div class="logo">
-        <img src="http://www.sailprogram.org.au/site/wp-content/uploads/sail_logo-FINAL_02-142x300.png" alt="Sudanese Australian Integrated Learning (SAIL) Program">
-      </div>
+  <img src="http://www.sailprogram.org.au/site/wp-content/uploads/sail_logo-FINAL_02-142x300.png" alt="Sudanese Australian Integrated Learning (SAIL) Program">
 
-    <nav>
-      <div class="links">
-        <%= link_to "Home", root_path %>
+  <body>
+
+  
+    <div class="alink"><%= link_to "Home", root_path %></div>
 
         <% if @current_tutor.present? %>
 
-            <%= link_to "All Tutors", tutors_path if @current_tutor.admin? %>
-            <%= link_to "All Students", students_path if @current_tutor.admin? %>
-            <%= link_to "Create Student", new_student_path %>
-            <%= link_to "All Programs", programs_path %>
-            <%= link_to 'Articles', controller: 'articles' %>
-            <%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete' %>
+            <div class="alink"><%= link_to "All Tutors", tutors_path if @current_tutor.admin? %></div>
+            <div class="alink"><%= link_to "All Students", students_path if @current_tutor.admin? %></div>
+            <div class="alink"> <%= link_to "Create Student", new_student_path %></div>
+            <div class="alink"><%= link_to "All Programs", programs_path %></div>
+            <div class="alink"><%= link_to "All Outcomes", results_path %></div>
+            <div class="alink"><%= link_to 'Articles', controller: 'articles' %></div>
+            <div class="alink"><%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete' %></div>
       </div>
           <% else %>
-            <%= link_to "Sign up", new_tutor_path %>
-            <%= link_to "Sign in", login_path %>
+          <div class="alink"<%= link_to "Sign up", new_tutor_path %></div>
+          <div class="alink"<%= link_to "Sign in", login_path %></div>
         <% end %>
-      </nav>
+    </nav>
+
     <%= yield %>
   </body>
+
+
 </html>

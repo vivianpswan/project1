@@ -5,12 +5,16 @@
   <li>Name: <%= @student.name %></li>
 
   <li>Age <%= @student.age %></li>
+
   <li>Stage: <%= @student.stage %></li>
+
+  <% @student.programs.each do |program| %>
+    <li>Programs: <%= link_to program.stage, program %></li>
+  <% end %>
 
   <% @student.tutors.each do |tutor| %>
     <li>Tutors: <%= link_to tutor.name, tutor %></li>
   <% end %>
-
 
 </ul>
 

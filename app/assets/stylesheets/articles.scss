@@ -11,3 +11,10 @@ th, td {
   th {
     background-color: rgb(60, 77, 131);
   }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+
+ }

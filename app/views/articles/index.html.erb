@@ -1,4 +1,5 @@
 
+<div class="container">
 <h1> List of Articles</h1> 
 
 <%= link_to 'Add a new article', new_article_path %>
@@ -14,6 +15,7 @@
  
   
     <tr>
+  
     <% @articles.each do |article| %>
         <td><%= article.updated_at%></td>
         <td><%= article.title %></td>
@@ -24,5 +26,6 @@
         </tr>
   <% end %>
 </table>
+</div>
 
 

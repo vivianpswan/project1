@@ -1,0 +1,23 @@
+
+<p><%= flash[:notice]%> </p>
+
+
+<p>
+<strong>Date:</strong>
+<%= @result.updated_at %>
+</p>
+
+<p>
+<strong>Outcome:</strong>
+<%= @result.outcome %>
+</p>
+
+<p>
+<strong>Completion:</strong>
+<%= @result.completion %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_path(@program) if @current_tutor.admin? %>
+
+<%= link_to 'Back', results_path %>

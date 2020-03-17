@@ -1,16 +1,20 @@
-<h1>SAIL PROGRAM</h1>
-<p>Sudanese Australian Integrated Learning (SAIL) Program <a href="http://www.sailprogram.org.au/site/">Find out more ... </a></p>
 
-<h2> Latest news </h2>
-
-<p>
-    <div class="latestnews">
-        <br>Updated at: <%= @article.updated_at %></br>
-        <br>Title: <%= @article.title %></br>
-        <br>Description: <%= @article.text %></br>
+<div class="homepage">
+    <div class="sailprogram">
+        <h1>SAIL PROGRAM</h1>
+        <p>Sudanese Australian Integrated Learning (SAIL) Program <a href="http://www.sailprogram.org.au/site/">Find out more ... </a></p>
     </div>
-</P>
 
+    <div class="latestnews">
+        <h2> Latest news </h2>
 
+        <p>
+            <br><strong>Updated at:</strong><%= @article.updated_at %></br>
+            <br><strong>Title:</strong> <%= @article.title %></br>
+            <br><strong>Description:</strong> <%= @article.text %></br>
+        </P>
+     </div>
+
+</div>
 
 

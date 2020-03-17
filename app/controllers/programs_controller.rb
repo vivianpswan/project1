@@ -21,7 +21,7 @@ class ProgramsController < ApplicationController
     def create
         @program = Program.new(program_params)
         if @program.save
-            flash[:notice] = "Your program was successfully created"
+            flash[:notice] = "Your program was successfully created. Refer to the last entry in the table."
             redirect_to programs_path
           else
             render 'new'
@@ -32,7 +32,7 @@ class ProgramsController < ApplicationController
         @program = Program.find(params[:id])
        
         if @program.update(program_params)
-          flash[:notice] = "Your program was updated"
+          flash[:notice] = "Details were updated. Please check the details below:"
           redirect_to @program
         else
           flash[:notice] = "Your program was not updated"  
@@ -45,12 +45,12 @@ class ProgramsController < ApplicationController
         @program = Program.find(params[:id])
         @program.destroy
        
-        redirect_to articles_path
+        redirect_to programs_path
     end
 
     private
         def program_params
-            params.require(:program).permit(:stage, :subject)
+            params.require(:program).permit(:stage, :subject, :student_id)
         end
 
 end

@@ -19,9 +19,6 @@ class TutorsController < ApplicationController
     end
   end
 
-
-
-
   def edit
     @tutor = Tutor.find params[:id]
   end
@@ -41,7 +38,6 @@ class TutorsController < ApplicationController
       tutor.destroy
       redirect_to tutors_path
     end
-
 
   private
   def tutor_params
