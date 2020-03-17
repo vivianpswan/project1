@@ -6,6 +6,7 @@
   <li>Stage: <%= @tutor.stage %></li>
   <li>Subject: <%= @tutor.subject %></li>
 
+
   <% @tutor.students.each do |student| %>
     <li>Students: <%= link_to student.name, student %></li>
   <% end %>
@@ -15,5 +16,8 @@
 
 <div class="controls">
   <%= link_to "Edit #{ @tutor.name }", edit_tutor_path(@tutor) %>
+  |
   <%= link_to "Delete #{ @tutor.name }", @tutor, :method => 'delete' %>
+  |
+  <%= link_to 'Back', tutors_path %>
 </div>

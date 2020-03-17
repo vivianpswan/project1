@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def welcome
-    @articles = Article.all
+    @article = Article.last
   end
 end
