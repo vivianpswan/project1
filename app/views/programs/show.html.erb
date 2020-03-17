@@ -1,0 +1,20 @@
+
+<p>
+<strong>Date:</strong>
+<%= @program.updated_at %>
+</p>
+
+<p>
+<strong>Stage:</strong>
+<%= @program.stage %>
+</p>
+
+<p>
+<strong>Subject:</strong>
+<%= @program.subject %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_path(@program) if @current_tutor.admin? %>
+
+<%= link_to 'Back', programs_path %>

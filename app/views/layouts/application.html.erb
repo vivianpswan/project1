@@ -23,6 +23,7 @@
             <%= link_to "All Tutors", tutors_path if @current_tutor.admin? %>
             <%= link_to "All Students", students_path if @current_tutor.admin? %>
             <%= link_to "Create Student", new_student_path %>
+            <%= link_to "All Programs", programs_path %>
             <%= link_to 'Articles', controller: 'articles' %>
             <%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete' %>
       </div>
