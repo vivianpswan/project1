@@ -8,6 +8,8 @@
 
   <li>Stage: <%= @student.stage %></li>
 
+
+  <marquee><h1>Student program count: <%= @student.programs.count %></h1></marquee>
   <% @student.programs.each do |program| %>
     <li>Programs: <%= link_to program.stage, program %></li>
   <% end %>
