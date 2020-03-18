@@ -6,10 +6,12 @@
 
   <li>Age <%= @student.age %></li>
 
-  <li>Stage: <%= @student.stage %></li>
-
   <% @student.programs.each do |program| %>
-    <li>Programs: <%= link_to program.stage, program %></li>
+    <li>Stage: <%= link_to program.stage, program %></li>
+  <% end %>
+
+  <% @student.results.each do |result| %>
+    <li>Results: <%= link_to result.outcome, result %></li>
   <% end %>
 
   <% @student.tutors.each do |tutor| %>

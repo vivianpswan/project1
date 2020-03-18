@@ -1,23 +1,43 @@
 
 <p><%= flash[:notice]%> </p>
 
+<h3> A Key Learning Area (KLA) is a subject or discipline within the primary education field. </h3>
 
 <p>
-<strong>Date:</strong>
+ <br><%= "KLAs of #{ @student.name }" %></br>
+
+<strong>Last updated at:</strong>
 <%= @result.updated_at %>
+
+<details>
+    <summary><%= @result.outcome %></summary>
+        <ul>
+            <input type="checkbox"><label> Numbers </label>
+            <input type="checkbox"><label> Counting </label>
+            <input type="checkbox"><label> Adding </label>
+            <input type="checkbox"><label> Subtracting </label>
+            <input type="checkbox"><label> Indentifying patterns </label>
+            <input type="checkbox"><label> Creating patterns </label>
+
+
+        </ul>
+</details>
+
+<details>
+    <summary><%= @result.outcome %></summary>
+        <ul>
+            <input type="checkbox"><label> Speaking </label>
+            <input type="checkbox"><label> Listening </label>
+            <input type="checkbox"><label> Reading </label>
+            <input type="checkbox"><label> Drawing  </label>
+            <input type="checkbox"><label> Writing </label>
+        </ul>    
+</details>
+
 </p>
 
-<p>
-<strong>Outcome:</strong>
-<%= @result.outcome %>
-</p>
-
-<p>
-<strong>Completion:</strong>
-<%= @result.completion %>
-</p>
 
 
-<%= link_to 'Edit', edit_program_path(@program) if @current_tutor.admin? %>
+<%= link_to 'Edit', edit_result_path(@result) if @current_tutor.admin? %>
 
 <%= link_to 'Back', results_path %>
