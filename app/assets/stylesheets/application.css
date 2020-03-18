@@ -14,43 +14,8 @@
  *= require_self
  */
 
-.imageborder {
-    border-right: 1px solid #bbb;
-    padding: 2em;
-}
 
- .container {
-    display: flex;
-    flex-direction: row;
-    background-color: burlywood;
 
- }
-
- .alink {
-    /* background-color: bisque; */
-    /* color: rgb(60, 77, 131); */
-    display: inline-block;
-    /* flex-direction: column; */
-    color: green;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-right: 1px solid #bbb;
-  }
-/* 
- .links {
-        /* background-color: bisque; */
-        /* color: rgb(60, 77, 131);
-        padding: 14px 25px;
-        text-align: right;
-        display: block;
-      } */
-    /* display: flex;
-    flex-direction: left;
-    justify-self: center;
-    align-items: center;
-    background-color: rgb(175, 204, 158); */
-
- }
 
  
 

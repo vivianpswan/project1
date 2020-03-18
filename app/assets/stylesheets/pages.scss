@@ -22,3 +22,26 @@
     width: 100%;
     text-transform: uppercase;
 }
+
+.imageborder {
+    border-right: 1px solid #bbb;
+    padding: 2em;
+}
+
+ .container {
+    display: flex;
+    flex-direction: row;
+    background-color: burlywood;
+
+ }
+
+ .alink {
+    /* background-color: bisque; */
+    /* color: rgb(60, 77, 131); */
+    display: inline-block;
+    /* flex-direction: column; */
+    color: green;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-right: 1px solid #bbb;
+  }
