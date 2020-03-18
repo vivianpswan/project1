@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'pages#welcome'
+  root :to => 'pages#index'
   resources :tutors
   
 

@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  def welcome
+  def index
     @article = Article.last
+    
     end
 end
