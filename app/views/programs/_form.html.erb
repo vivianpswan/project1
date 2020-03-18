@@ -1,4 +1,4 @@
-<%= form_with model: @program, local: true do |form| %>
+<%= form_for @program do |f| %>
  
     <% if @program.errors.any? %>
       <div id="error_explanation">
@@ -14,17 +14,17 @@
       </div>
     <% end %> 
 
-    <p>
-      <%= form.label :stage %><br>
-      <%= form.text_field :stage %>
-    </p>
+    <div class="form-group">   
+      <%= f.label :stage %><br>
+      <%= f.text_field :stage, :class => 'form-control' %>
+    </div>
+   
+    <div class="form-group">   
+      <%= f.label :subject %><br>
+      <%= f.text_area :subject, :class => 'form-control' %>
+    </div>
    
     <p>
-      <%= form.label :subject %><br>
-      <%= form.text_area :subject %>
-    </p>
-   
-    <p class="submit">
       <%= f.submit :class => "btn btn-secondary" %>
     </p>
    

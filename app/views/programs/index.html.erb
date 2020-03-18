@@ -7,18 +7,18 @@
 
 <table>
   <tr>
-   
-        <th>Date</th>
-        <th>Stage</th>
+           <th>Stage</th>
         <th>Subjects</th>
      
   </tr>
  
   
     <tr>
-    <% @programs.each do |program| %>
-        <td><%= program.updated_at%></td>
-        <td><%= program.stage %></td>
+
+       
+
+        <% @programs.each do |program| %>
+          <td><%= program.stage %></td>
         <td><%= program.subject %></td>
         <td><%= link_to 'Edit', edit_program_path(program) %></td>
         <td><%= link_to 'Delete', program_path(program), method: :delete, data: { confirm: 'Are you sure you want to delete this?' }%></td>
