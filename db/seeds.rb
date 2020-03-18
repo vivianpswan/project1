@@ -63,5 +63,3 @@ r10.programs << p1 << p4
 r11.programs << p1 << p4
 
 puts "Students and results"
-s1.results << r1
-s2.results << r2
