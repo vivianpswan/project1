@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2020_03_16_041401) do
   end
 
   create_table "programs", force: :cascade do |t|
-    t.text "stage"
     t.text "subject"
+    t.text "kla"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

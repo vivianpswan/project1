@@ -48,7 +48,7 @@ end
 
 private
     def result_params
-        params.require(:result).permit(:outcome, :completion)
+        params.require(:result).permit(:outcome, :completion, :student_id)
     end
 end
 
