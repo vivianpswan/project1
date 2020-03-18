@@ -63,3 +63,9 @@ r10.programs << p1 << p4
 r11.programs << p1 << p4
 
 puts "Students and results"
+s1.results << r1 << r2 << r3 << r4 << r5 << r6 << r7 << r8 << r9 << r10 << r11
+s2.results << r1 << r2 << r3 << r4 << r5 << r6 << r7 << r8 << r9 << r10 << r11
+s3.results << r1 << r2 << r3 << r4 << r5 << r6 << r7 << r8 << r9 << r10 << r11
+s4.results << r1 << r2 << r3 << r4 << r5 << r6 << r7 << r8 << r9 << r10 << r11
+s5.results << r1 << r2 << r3 << r4 << r5 << r6 << r7 << r8 << r9 << r10 << r11
+s6.results << r1 << r2 << r3 << r4 << r5 << r6 << r7 << r8 << r9 << r10 << r11
