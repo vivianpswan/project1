@@ -1,6 +1,43 @@
 
 <p><%= flash[:notice]%> </p>
 
+<h4> A Key Learning Area (KLA) is a subject or discipline within the primary education field. </h4>
+<p>
+ <br>
+    <%= "KLAs of a student's name" %>
+ </br>
+
+</br>
+<details>
+ <summary><%= "Year 2 - Maths" %></summary>
+     <ul>
+         <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+             <label class="form-check-label" for="inlineRadio1"> Numbers </label>
+         </div>
+         <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+             <label class="form-check-label" for="inlineRadio1"> Counting </label>
+         </div>
+         <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+             <label class="form-check-label" for="inlineRadio1"> Adding </label>
+         </div>
+         <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+             <label class="form-check-label" for="inlineRadio1"> Sutracting </label>
+         </div>
+         <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+             <label class="form-check-label" for="inlineRadio1"> Indentifying patterns </label>
+         </div>
+         <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+             <label class="form-check-label" for="inlineRadio1"> Creating patterns </label>
+         </div>
+     </ul>
+</details>
+
 
 <p>
 <strong>Date:</strong>
@@ -8,14 +45,16 @@
 </p>
 
 <p>
-<strong>Stage:</strong>
-<%= @program.stage %>
+<strong>Enrolment:</strong>
+<%= @program.subject %>
 </p>
 
 <p>
-<strong>Subject:</strong>
-<%= @program.subject %>
+<strong>Key Learning Areas:</strong>
+<%= @program.kla %>
 </p>
+
+
 
 
 <%= link_to 'Edit', edit_program_path(@program) if @current_tutor.admin? %>

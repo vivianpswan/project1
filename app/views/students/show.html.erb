@@ -1,19 +1,13 @@
-<h1><%= "Student Profile of #{ @student.name }" %></h1>
+<h4><%= "Student Profile of #{ @student.name }" %></h4>
 
 <%= image_tag @student.image, :class => 'feature' if @student.image.present? %>
 <ul>
   <li>Name: <%= @student.name %></li>
 
-  <li>Age <%= @student.age %></li>
+  <li>Age: <%= @student.age %></li>
 
-  <marquee><h1>Student program count: <%= @student.programs.count %></h1></marquee>
   <% @student.programs.each do |program| %>
-  
-    <li>Stage: <%= link_to program.stage, program %></li>
-  <% end %>
-
-  <% @student.results.each do |result| %>
-    <li>Results: <%= link_to result.outcome, result %></li>
+    <li>Enrolments: <%= link_to program.subject, program %></li>
   <% end %>
 
   <% @student.tutors.each do |tutor| %>

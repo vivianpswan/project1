@@ -17,10 +17,10 @@ s6 = Student.create :name => 'Isabella Hanks', :image => 'https://www.melbournec
 puts "#{ Student.count } students created"
 
 Program.destroy_all
-p1 = Program.create :subject => 'English', :kla => 'Speaking'
-p2 = Program.create :subject => 'English', :kla => 'Listening'
-p3 = Program.create :subject => 'Maths', :kla => 'Numbers'
-p4 = Program.create :subject => 'Maths', :kla => 'Counting'
+p1 = Program.create :subject => 'Year 1 - English', :kla => 'Speaking'
+p2 = Program.create :subject => 'Year 2 - English', :kla => 'Listening'
+p3 = Program.create :subject => 'Year 2 - Maths', :kla => 'Numbers'
+p4 = Program.create :subject => 'Year 2 - Maths', :kla => 'Counting'
 
 puts "#{ Program.count } programs created"
 
@@ -51,7 +51,4 @@ r6.programs << p1 << p2 << p3 << p4
 puts "Students and results"
 s1.results << r1
 s2.results << r2
-s3.results << r2
-s4.results << r2
-s5.results << r2
-s6.results << r1
+
