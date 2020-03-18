@@ -1,5 +1,4 @@
-<%= form_with model: @result, local: true do |form| %>
- 
+<%= form_for @result do |f| %>
     <% if @result.errors.any? %>
       <div id="error_explanation">
         <h2>
@@ -13,19 +12,19 @@
         </ul>
       </div>
     <% end %> 
-
-    <p>
-      <%= form.label :kla %><br>
-      <%= form.text_field :outcome %>
-    </p>
+  
+    <div class="form-group">   
+        <%= f.label :outcome %><br>
+        <%= f.text_field :outcome, :class => 'form-control' %>
+    </div>  
+   
+    <div class="form-group"> 
+      <%= f.label :completion %><br>
+      <%= f.text_field :completion, :class => 'form-control' %>
+    </div>
    
     <p>
-      <%= form.label :completion %><br>
-      <%= form.text_field :completion %>
-    </p>
-   
-    <p>
-      <%= form.submit %>
+      <%= f.submit :class => "btn btn-secondary" %>
     </p>
    
   <% end %>

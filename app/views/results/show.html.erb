@@ -1,37 +1,69 @@
 
 <p><%= flash[:notice]%> </p>
 
-<h3> A Key Learning Area (KLA) is a subject or discipline within the primary education field. </h3>
-
+<h4> A Key Learning Area (KLA) is a subject or discipline within the primary education field. </h4>
 <p>
- <br><%= "KLAs of #{ @student.name }" %></br>
-
-<strong>Last updated at:</strong>
-<%= @result.updated_at %>
-
+ <br>
+    <%= "KLAs of a student's name" %>
+ </br>
+<br> 
+    <strong>Last updated at:</strong>
+    <%= @result.updated_at %>
+</br>
 <details>
     <summary><%= @result.outcome %></summary>
         <ul>
-            <input type="checkbox"><label> Numbers </label>
-            <input type="checkbox"><label> Counting </label>
-            <input type="checkbox"><label> Adding </label>
-            <input type="checkbox"><label> Subtracting </label>
-            <input type="checkbox"><label> Indentifying patterns </label>
-            <input type="checkbox"><label> Creating patterns </label>
-
-
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> Numbers </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> Counting </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> Adding </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> Sutracting </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> Indentifying patterns </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> Creating patterns </label>
+            </div>
         </ul>
 </details>
 
 <details>
     <summary><%= @result.outcome %></summary>
         <ul>
-            <input type="checkbox"><label> Speaking </label>
-            <input type="checkbox"><label> Listening </label>
-            <input type="checkbox"><label> Reading </label>
-            <input type="checkbox"><label> Drawing  </label>
-            <input type="checkbox"><label> Writing </label>
-        </ul>    
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> Speaking </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"> Listening </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"> Reading </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"> Drawing </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1"> Writing </label>
+        </div>
+    </ul>    
 </details>
 
 </p>

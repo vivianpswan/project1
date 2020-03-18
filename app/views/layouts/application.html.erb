@@ -3,8 +3,9 @@
   <head>
     <title>Project1</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,7 +14,6 @@
   <body>
 
   <img src="http://www.sailprogram.org.au/site/wp-content/uploads/sail_logo-FINAL_02-142x300.png" alt="Sudanese Australian Integrated Learning (SAIL) Program" class="imageborder">
-
   
     <div class="alink"><%= link_to "Home", root_path %></div>
 
