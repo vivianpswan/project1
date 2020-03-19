@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  get '/programs/:id/:student_id' => 'programs#show'
+
   resources :students
   resources :articles
   resources :programs

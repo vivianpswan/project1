@@ -8,7 +8,7 @@
   <li>Age: <%= @student.age %></li>
 
   <% @student.programs.each do |program| %>
-    <li>Currently enrol in: <%= link_to program.subject, program %></li>
+    <li>Currently enrol in: <%= link_to program.subject, "/programs/#{program.id}/#{@student.id}" %></li>
   <% end %>
 
   <% @student.tutors.each do |tutor| %>

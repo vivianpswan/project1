@@ -8,7 +8,8 @@ class ProgramsController < ApplicationController
     
     def show
         @program = Program.find(params[:id])
-       
+        @student = Student.find(params[:student_id])
+
       end
 
     def new
