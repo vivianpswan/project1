@@ -21,7 +21,7 @@
 </ul>
 
 <div class="controls">
-  <%= link_to "Edit #{ @student.name }", edit_student_path(@student) %>
-  <%= link_to "Delete #{ @student.name }", @student, :method => 'delete' %>
+  <%= link_to "Edit #{ @student.name }", edit_student_path(@student), :class => "btn btn-secondary btn-sm" %>
+  <%= link_to "Delete #{ @student.name }", @student, :method => 'delete', :class => "btn btn-secondary btn-sm" %>
 </div>
 
