@@ -1,20 +1,15 @@
-<h4><%= "Student Profile of #{ @student.name }" %></h4>
+<h4 class="heading"><%= "Student Profile of #{ @student.name }" %></h4>
 
-<%= image_tag @student.image, :class => 'feature' if @student.image.present? %>
+<%= image_tag @student.image, class: 'img-fluid' if @student.image.present? %>
+
 <ul>
   <li>Name: <%= @student.name %></li>
 
   <li>Age: <%= @student.age %></li>
 
   <% @student.programs.each do |program| %>
-    <li>Returns Year 1 - English, KLA = speaking. This links to program.subject in the program page: <%= link_to program.subject, program %></li>
+    <li>Currently enrol in: <%= link_to program.subject, program %></li>
   <% end %>
-
-  <% @student.results.each do |result| %>
-    <li>Returns a list of KLAs. This links to result.outcome in the result page: <%= link_to result.outcome, result %></li>
-  <% end %>
-
-  <li> The correct link should be program.outcome
 
   <% @student.tutors.each do |tutor| %>
     <li>Tutors: <%= link_to tutor.name, tutor %></li>

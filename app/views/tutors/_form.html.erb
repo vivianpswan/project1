@@ -1,39 +1,34 @@
 <%= form_for @tutor do |f| %>
-    <div class="form-group col-md-4">  
+    <div class="form-group">  
         <%= f.label :name %>
         <%= f.text_field :name, :required => true, :autofocus => true, :class => 'form-control' %>
     </div>
 
-    <div class="form-group col-md-4">  
+    <div class="form-group">  
         <%= f.label :email %>
         <%= f.text_field :email, :required => true, :autofocus => true, :class => 'form-control' %>
     </div>
-    <div class="form-group col-md-4">  
+    <div class="form-group">  
         <%= f.label :stage %>
         <%= f.text_field :stage, :class => 'form-control' %>
     </div>
     
-    <div class="form-group col-md-4">  
+    <div class="form-group">  
         <%= f.label :subject %>
         <%= f.text_field :subject, :class => 'form-control' %>
     </div>
 
     <% if @tutor.id.nil? %>
 
-    <div class="form-group col-md-4"> 
+    <div class="form-group"> 
         <%= f.label :password %>
         <%= f.password_field :password, :required => true, :class => 'form-control' %>
     </div>
 
-    <div class="form-group col-md-4">      
+    <div class="form-group">      
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, :required => true, :class => 'form-control' %>
     </div>
-
-    # <div class="form-group col-md-4">  
-    #     <%= f.label :admin? %>
-    #     <%= f.check_box :admin, :class => 'form-control' %>
-    # </div>
     
     <% end %>
         <%= f.submit :class => "btn btn-secondary btn-sm" %>

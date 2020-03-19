@@ -1,7 +1,7 @@
-<h4>All Students</h4>
+<h4 class="heading">All Students</h4>
 
 <% @students.each do |student| %>
-  <%= image_tag student.image, :class => 'thumb' if student.image.present? %>
+  <%= image_tag student.image, :class => "img-circle" if student.image.present? %>
   <ul>
     <li>Name: <%= link_to student.name, student %></li>
     <li>Age: <%= student.age %></li>
