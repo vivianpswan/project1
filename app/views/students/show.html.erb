@@ -7,12 +7,14 @@
   <li>Age: <%= @student.age %></li>
 
   <% @student.programs.each do |program| %>
-    <li>Enrolments: <%= link_to program.subject, program %></li>
+    <li>Returns Year 1 - English, KLA = speaking. This links to program.subject in the program page: <%= link_to program.subject, program %></li>
   <% end %>
 
   <% @student.results.each do |result| %>
-    <li>Enrolments: <%= link_to result.outcome, result %></li>
+    <li>Returns a list of KLAs. This links to result.outcome in the result page: <%= link_to result.outcome, result %></li>
   <% end %>
+
+  <li> The correct link should be program.outcome
 
   <% @student.tutors.each do |tutor| %>
     <li>Tutors: <%= link_to tutor.name, tutor %></li>

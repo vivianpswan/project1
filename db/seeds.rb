@@ -19,7 +19,7 @@ puts "#{ Student.count } students created"
 Program.destroy_all
 p1 = Program.create :subject => 'Year 1 - English', :kla => 'Speaking'
 p2 = Program.create :subject => 'Year 2 - English', :kla => 'Listening'
-p3 = Program.create :subject => 'Year 2 - Maths', :kla => 'Numbers'
+p3 = Program.create :subject => 'Year 1 - Maths', :kla => 'Numbers'
 p4 = Program.create :subject => 'Year 2 - Maths', :kla => 'Counting'
 
 puts "#{ Program.count } programs created"
@@ -41,8 +41,8 @@ t2.students << s4 << s5
 t3.students << s1 << s6
 
 puts "Results and programs"
-r1.programs << p1 << p2 << p3 << p4
-r2.programs << p1 << p2 << p3 << p4
+r1.programs << p1 
+r2.programs << p2 
 r3.programs << p1 << p2 << p3 << p4
 r4.programs << p1 << p2 << p3 << p4
 r5.programs << p1 << p2 << p3 << p4
