@@ -10,6 +10,10 @@
     <li>Enrolments: <%= link_to program.subject, program %></li>
   <% end %>
 
+  <% @student.results.each do |result| %>
+    <li>Enrolments: <%= link_to result.outcome, result %></li>
+  <% end %>
+
   <% @student.tutors.each do |tutor| %>
     <li>Tutors: <%= link_to tutor.name, tutor %></li>
   <% end %>

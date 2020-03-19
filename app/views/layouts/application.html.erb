@@ -15,23 +15,49 @@
 
   <img src="http://www.sailprogram.org.au/site/wp-content/uploads/sail_logo-FINAL_02-142x300.png" alt="Sudanese Australian Integrated Learning (SAIL) Program" class="imageborder">
   
-    <div class="alink"><%= link_to "Home", root_path %></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+    <ul class="navbar-nav ml-auto flex-nowrap">
+
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link m-2 menu-item" %>
+        </li>
 
         <% if @current_tutor.present? %>
-
-            <div class="alink"><%= link_to "All Tutors", tutors_path if @current_tutor.admin? %></div>
-            <div class="alink"><%= link_to "All Students", students_path if @current_tutor.admin? %></div>
-            <div class="alink"> <%= link_to "Create Student", new_student_path %></div>
-            <div class="alink"><%= link_to "All Programs", programs_path %></div>
-            <div class="alink"><%= link_to "All Outcomes", results_path %></div>
-            <div class="alink"><%= link_to 'Articles', controller: 'articles' %></div>
-            <div class="alink"><%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete' %></div>
-      </div>
+            <li class="nav-item">
+              <%= link_to "All Tutors", tutors_path, class: "nav-link m-2 menu-item" if @current_tutor.admin? %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "All Students", students_path, class: "nav-link m-2 menu-item" if @current_tutor.admin? %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Create Student", new_student_path, class: "nav-link m-2 menu-item" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "All Programs", programs_path, class: "nav-link m-2 menu-item" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "All Outcomes", results_path, class: "nav-link m-2 menu-item" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Articles", articles_path, class: "nav-link m-2 menu-item" %>
+            </li>
+              <li class="nav-item"><%= link_to "Sign out #{ @current_tutor.email }", login_path, :method => 'delete', class: "nav-link m-2 menu-item" %>
+            </li>
+      
           <% else %>
-          <div class="alink"><%= link_to "Sign up", new_tutor_path %></div>
-          <div class="alink"><%= link_to "Sign in", login_path %></div>
+              <li class="nav-item">
+                <%= link_to "Sign up", new_tutor_path, class: "nav-link m-2 menu-item" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Sign in", login_path, class: "nav-link m-2 menu-item" %>
+              </li>
         <% end %>
-    </nav>
+      </ul>
+  </div>
+
+</nav>
 
     <%= yield %>
   </body>
