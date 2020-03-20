@@ -13,8 +13,8 @@ s1 = Student.create :name => 'Elizabeth Hanks', :image => 'https://image.shutter
 s2 = Student.create :name => 'Olivia Hanks', :image => 'https://image.shutterstock.com/image-photo/portrait-cute-7-years-old-260nw-1101299165.jpg', :age => '7', :stage => 'Year 2'
 s3 = Student.create :name => 'Jasper Hanks', :image => 'https://image.shutterstock.com/image-photo/smiling-boy-six-years-old-260nw-455866204.jpg', :age => '7', :stage => 'Year 3'
 s4 = Student.create :name => 'Anthony Hanks', :image => 'https://image.shutterstock.com/image-photo/cute-seven-year-old-filipino-260nw-311421431.jpg', :age => '6', :stage => 'Year 4'
-s5 = Student.create :name => 'Abby Hanks', :image => 'https://image.shutterstock.com/image-photo/portrait-cute-7-years-old-260nw-1101612335.jpg', :age => '7', :stage => 'Year 2'
-s6 = Student.create :name => 'Isabella Hanks', :image => 'https://image.shutterstock.com/image-photo/outdoor-portrait-cute-little-89-260nw-506899096.jpg', :age => '5', :stage => 'Year 1'
+s5 = Student.create :name => 'Abby Hanks', :image => 'https://image.shutterstock.com/image-photo/portrait-cute-7-years-old-260nw-1101612335.jpg', :age => '7', :stage => 'Year 5'
+s6 = Student.create :name => 'Isabella Hanks', :image => 'https://image.shutterstock.com/image-photo/outdoor-portrait-cute-little-89-260nw-506899096.jpg', :age => '5', :stage => 'Year 6'
 
 puts "#{ Student.count } students created"
 
@@ -36,6 +36,16 @@ r6 = Result.create :outcome => 'Year 6', :completion => 'True'
 
 puts "#{ Result.count } results created"
 
+Article.destroy_all
+a1 = Article.create :title => 'How Parramatta students plan to learn from home', :text => 'Learning from home, much like the classroom, will require different approaches for different learners.'
+a2 = Article.create :title => 'Prime Minister announces schools will stay open', :text => 'The Prime Minister and the Chief Medical Officer have announced that Australian schools will remain open based on health advice.'
+a3 = Article.create :title => 'Health and hygiene advice to schools', :text => 'The department has provided advice to schools on health and hygiene practices in schools to limit the spread of germs, including viruses, in our school communities.'
+a4 = Article.create :title => 'A frontline look at social distancing in schools', :text => 'Today I visited Leichhardt Public School to see firsthand how our staff and students are coping with the new social distancing measures to control the COVID-19 virus.'
+a5 = Article.create :title => 'Health advice on school closures', :text => 'The World Health Organisation has declared COVID-19 a pandemic and the situation continues to evolve quickly with an increasing number of countries having sustained community transmission.'
+
+puts "#{ Article.count } articles created"
+
+
 # Associations #################################################################
 puts "Tutors and students"
 t1.students << s2 << s3
@@ -44,9 +54,9 @@ t3.students << s1 << s6
 t4.students << s1 << s6
 
 puts "Results and programs"
-r1.programs << p1 
-r2.programs << p4 
-r3.programs << p1 << p2 << p3 << p4
+r1.programs << p1 << p3
+r2.programs << p2 << p4
+r3.programs << p2 << p4
 r4.programs << p1 << p2 << p3 << p4
 r5.programs << p1 << p2 << p3 << p4
 r6.programs << p1 << p2 << p3 << p4
