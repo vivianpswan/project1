@@ -3,7 +3,7 @@ Tutor.destroy_all
 t1 = Tutor.create :name => 'Tom Hanks', :stage => 'Year 2', :subject => 'Maths', :email => 'tomhanks@gmail.com', :password => 'chicken', :admin => true 
 t2 = Tutor.create :name => 'Rita Hanks', :stage => 'Year 2', :subject => 'English', :email => 'ritahanks@gmail.com', :password => 'chicken', :admin => true
 t3 = Tutor.create :name => 'Carol Hanks', :stage => 'Year 1', :subject => 'Maths', :email => 'carolhanks@gmail.com', :password => 'chicken'
-t4 = Tutor.create :name => 'Daphane Hanks', :stage => 'Year 1', :subject => 'English', :email => 'carolhanks@gmail.com', :password => 'chicken'
+t4 = Tutor.create :name => 'Daphane Hanks', :stage => 'Year 1', :subject => 'English', :email => 'daphanehanks@gmail.com', :password => 'chicken'
 
 
 puts "#{ Tutor.count } tutors created"
