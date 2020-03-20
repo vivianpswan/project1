@@ -64,7 +64,7 @@ r6.programs << p1 << p2 << p3 << p4
 puts "Students and results"
 s1.results << r1
 s2.results << r2
-s3.results << r3
-s4.results << r4
+s3.results << r1
+s4.results << r2
 
 
