@@ -9,6 +9,7 @@
 
   <% @tutor.students.each do |student| %>
     <li>Students: <%= link_to student.name, student %></li>
+    <%= (@tutor.students.map{ |student| link_to student.name, student}).join(", ") %>
   <% end %>
 
 
