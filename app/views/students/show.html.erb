@@ -1,6 +1,8 @@
 <h4 class="heading"><%= "Student Profile of #{ @student.name }" %></h4>
 
-<%= image_tag @student.image, class: 'img-fluid' if @student.image.present? %>
+
+      <%= image_tag @student.image, class: 'img-fluid' if @student.image.present? %>
+
 
 <ul>
   <li>Name: <%= @student.name %></li>
