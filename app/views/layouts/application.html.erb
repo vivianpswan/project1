@@ -22,19 +22,22 @@
         </li>
         <% if @current_tutor.present? %>
             <li class="nav-item">
-              <%= link_to "All Tutors", tutors_path, class: "nav-link m-2 menu-item" %>
+              <%= link_to "Our Tutors", tutors_path, class: "nav-link m-2 menu-item" %>
             </li>
             <li class="nav-item">
-              <%= link_to "All Students", students_path, class: "nav-link m-2 menu-item" %>
+              <%= link_to "Create Tutor", new_tutor_path, class: "nav-link m-2 menu-item" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Our Students", students_path, class: "nav-link m-2 menu-item" %>
             </li>
             <li class="nav-item">
               <%= link_to "Create Student", new_student_path, class: "nav-link m-2 menu-item" %>
             </li>
             <li class="nav-item">
-              <%= link_to "All Programs", programs_path, class: "nav-link m-2 menu-item" %>
+              <%= link_to "Our Programs", programs_path, class: "nav-link m-2 menu-item" %>
             </li>
             <li class="nav-item">
-              <%= link_to "All Outcomes", results_path, class: "nav-link m-2 menu-item" %>
+              <%= link_to "Our Outcomes", results_path, class: "nav-link m-2 menu-item" %>
             </li>
             <li class="nav-item">
               <%= link_to "Articles", articles_path, class: "nav-link m-2 menu-item" %>

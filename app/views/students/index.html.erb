@@ -1,18 +1,16 @@
 <h4 class="heading">All Students</h4>
-
-
-<div class="card-columns">
+  <div class="card-columns">
       <% @students.each do |student| %>
           <div class="card">
               <%= image_tag student.image, :class => "card-img-top" if student.image.present? %>
                 <div class="card-body">
-                  <h5 class="card-title">Name: <%= link_to student.name, student %></h5>
+                  <h6 class="card-title">Name: <%= link_to student.name, student %></h6>
                   <p class="card-text">Age: <%= student.age %></p>
                   <p class="card-text">Stage: <%= student.stage %></p>
                 </div>  
           </div>  
       <% end %>
-    </div>
+  </div>
 
 
 
