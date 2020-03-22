@@ -7,7 +7,7 @@
 
         <div class="card-body">
           <p class="card-text">Email: <%= @student.name %></p>
-          <p class="card-text">Stage: <%= @student.age %></p>
+          <p class="card-text">Age: <%= @student.age %></p>
           
           <p class="card-text">Tutors(s):</p>
             <% @student.tutors.each do |tutor| %>
@@ -15,12 +15,17 @@
                 <li><%= link_to tutor.name, tutor %></li>
               </div>
             <% end %>
-        
+
           <p class="card-text">Currently enrolled in:</p>
             <% @student.programs.each do |program| %>
               <div class="card-title">
                 <li><%= link_to program.subject, "/programs/#{program.id}/#{@student.id}" %></li>
-              </div>
+                </div>
+            <% end %>
+
+            <p>Key learning areas: </p>
+            <% @student.programs.each do |program| %>
+              <li><%= link_to program.kla, program %></li>
             <% end %>
 
           <div class="controls">

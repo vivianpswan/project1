@@ -3,42 +3,30 @@
     <h4 class="heading"> A Key Learning Area (KLA) is a subject or discipline within the primary education field. </h4>
 
 <p></p>
-    <p>KLAs of <%= @student.name %></p>
+    <p>KLAs of </p>
 <p></p>
 
 <p>
     <strong>Enrolled in:</strong>
 </p>
 
-<details>
-    <summary><%= @program.subject %></summary>
+    <p><%= @program.subject %></p>
+
+    <%= @program.kla %>
+
+
+
+    <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+    
         <ul>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                 <label class="form-check-label" for="inlineRadio1"> Speaking </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1"> Listening </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1"> Reading </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1"> Drawing </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1"> Writing </label>
-        </div>
-    </ul>    
-</details>
+            </div>
+        </ul>    
 
-<br>
 <%= link_to 'Edit', edit_program_path(@program) if @current_tutor.admin? %>
 
 
     <%= link_to 'Back', programs_path %>
-</br>    
+ 

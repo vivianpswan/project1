@@ -8,9 +8,9 @@ class ProgramsController < ApplicationController
     
     def show
         @program = Program.find(params[:id])
-        @student = Student.find(params[:student_id])
+        @student = Student.find_by_id(params[:student_id])
 
-      end
+    end
 
     def new
         @program = Program.new
@@ -54,5 +54,4 @@ class ProgramsController < ApplicationController
         def program_params
             params.require(:program).permit(:stage, :subject, :student_id)
         end
-
-end
+      end
