@@ -52,6 +52,6 @@ class ProgramsController < ApplicationController
 
     private
         def program_params
-            params.require(:program).permit(:stage, :subject, :student_id)
+            params.require(:program).permit(:stage, :subject, :student_id, program_ids:[])
         end
       end
