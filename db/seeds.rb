@@ -29,7 +29,6 @@ Result.destroy_all
 r1 = Result.create :outcome => 'STAGE 1 (YEARS 1–2) - English', :completion => 'True'
 r2 = Result.create :outcome => 'STAGE 1 (YEARS 1–2) - Mathemtics', :completion => 'True'
 
-
 puts "#{ Result.count } results created"
 
 Article.destroy_all
@@ -41,8 +40,8 @@ a5 = Article.create :title => 'Health advice on school closures', :text => 'The 
 
 puts "#{ Article.count } articles created"
 
-
 # Associations #################################################################
+
 puts "Tutors and students"
 t1.students << s2 << s3
 t2.students << s4 << s5
@@ -52,7 +51,6 @@ t4.students << s1 << s6
 puts "Results and programs"
 r1.programs << p1
 r2.programs << p2
-
 
 puts "Students and results"
 s1.results << r1

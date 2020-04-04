@@ -3,21 +3,21 @@
     <h5 class="card-title"><%= "#{ @tutor.name }" %></h5>
     <h6 class="card-subtitle mb-2 text-muted">Tutor</h6>
   </div>
-        <div class="card-body">
-          <p class="card-text">Email: <%= @tutor.email %></p>
-          <p class="card-text">Stage: <%= @tutor.stage %></p>
-          <p class="card-text">Subject: <%= @tutor.subject %></p>
-          <p class="card-text">Student(s):</p>
+    <div class="card-body">
+      <p class="card-text">Email: <%= @tutor.email %></p>
+      <p class="card-text">Stage: <%= @tutor.stage %></p>
+      <p class="card-text">Subject: <%= @tutor.subject %></p>
+      <p class="card-text">Student(s):</p>
 
-          <% @tutor.students.each do |student| %>
-            <div class="card-title">
-              <li><%= link_to student.name, student %></li>
-            </div>
-          <% end %>
-        <div class="controls">
-          <%= link_to "Edit #{ @tutor.name }", edit_tutor_path(@tutor), :class => "btn btn-secondary btn-sm"  %>
-          <%= link_to "Delete", @tutor, :method => 'delete', data: { confirm: 'Are you sure you want to delete this?' }, :class => "btn btn-secondary btn-sm"  %>
-          <%= link_to 'Back', tutors_path, :class => "btn btn-secondary btn-sm"  %>
+      <% @tutor.students.each do |student| %>
+        <div class="card-title">
+          <li><%= link_to student.name, student %></li>
         </div>
-      </div>
+      <% end %>
+    <div class="controls">
+      <%= link_to "Edit #{ @tutor.name }", edit_tutor_path(@tutor), :class => "btn btn-secondary btn-sm"  %>
+      <%= link_to "Delete", @tutor, :method => 'delete', data: { confirm: 'Are you sure you want to delete this?' }, :class => "btn btn-secondary btn-sm"  %>
+      <%= link_to 'Back', tutors_path, :class => "btn btn-secondary btn-sm"  %>
+    </div>
+  </div>
 </div>

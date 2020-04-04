@@ -23,8 +23,6 @@
                 </div>
             <% end %>
 
-            <%= f.collection_check_boxes :program_ids, Program.all, :id, :subject %>
-
 
           <div class="controls">
             <%= link_to "Edit #{ @student.name }", edit_student_path(@student), :class => "btn btn-secondary btn-sm" %>
@@ -32,4 +30,5 @@
             <%= link_to 'Back', students_path, :class => "btn btn-secondary btn-sm"  %>
           </div>
         </div>
+
 
